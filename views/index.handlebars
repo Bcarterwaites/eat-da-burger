@@ -1,0 +1,38 @@
+<h1>Eat Da Burger!!!</h1>
+<br>
+
+<div id="avial">
+    <h2>Burgers Available: </h2>
+    <ul>
+        {{#each foods}} 
+        {{#unless devoured}}
+        {{> foods/foods-block devoured=false}}
+        {{/unless}}
+        {{/each}}
+    </ul>
+    </div>
+     
+        <div id="devoured">
+            <h2>Devoured Burgers: </h2>
+            
+            <ul>
+            {{#each foods}}
+            {{#if devoured}}
+            {{> foods/foods-block devoured=true}}
+            {{/if}}
+            {{/each}}
+            </ul>
+        </div>
+
+        <div id="add">
+            <h2>Add a Burger: </h2>
+
+            <form class="create-update-form"></form>
+            <div class="form-group">
+                <label for="dab">Burger Name:</label>
+                <input type="text" id="post-new-burger" name="burger_name">
+            </div>
+            <button class="btn btn-primary" type="submit">Add Burger</button>
+            
+            </form>
+        </div>
