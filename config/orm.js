@@ -18,7 +18,12 @@ function objToSql(ob) {
         var value = ob[key];
 
         if (Object.hasOwnProperty.call(ob, key)) {
-            arr.push(key + "=" + ob[key]);
+            
+            if (typeof value ==- "string" && value.indexOf(" ") >= 0) {
+                value = "'" + value + "'";
+            }
+
+            arr.push(key + "=" + value);
     }
 }
 
@@ -84,7 +89,7 @@ var orm = {
 
     
 
-        connection.query(querystring, function(err, result) {
+        connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
             }
