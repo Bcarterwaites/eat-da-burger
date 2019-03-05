@@ -1,6 +1,7 @@
-<h1>Eat Da Burger<h1>
---------------------------------------------------------------------------------------------------------------------------------
+<h1>Eat Da Burger</h1>
+
 Built as a practice in MySQL and Express, this application stores "burgers" that users submit, and updates the burger status when a burger is "devoured" by a user.
+<br>
 
 [Click here to use app]: https://burger-eat-da.herokuapp.com/
 
